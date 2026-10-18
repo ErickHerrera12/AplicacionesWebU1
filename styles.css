@@ -1,6 +1,6 @@
 /* ============================================================
    styles.css - Centro de Tutorías Académicas
-   Diseño Editorial Académico, Limpio y Profesional
+   Etapa 3: Flexbox/Grid + exactamente 2 breakpoints (768 / 1024)
    ============================================================ */
 
 /* ---------- 1. Variables de Diseño ---------- */
@@ -17,7 +17,7 @@
   --blanco: #ffffff;
   --borde: #cbd5e1;           /* Slate 300 */
   --borde-suave: #e2e8f0;     /* Slate 200 */
-  
+
   --sombra-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
   --sombra-tarjeta: 0 4px 12px rgba(15, 23, 42, 0.05);
   --sombra-hover: 0 10px 24px -4px rgba(15, 23, 42, 0.1);
@@ -27,7 +27,9 @@
 }
 
 /* ---------- 2. Reseteo y Base ---------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -44,6 +46,9 @@ body {
   color: var(--texto);
   background-color: var(--fondo);
   -webkit-font-smoothing: antialiased;
+  /* Prevención de desbordamiento horizontal */
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* ---------- 3. Accesibilidad ---------- */
@@ -149,7 +154,7 @@ body {
   border-color: #ffffff;
 }
 
-/* Barra de navegación */
+/* Barra de navegación (Flexbox) */
 .sitio-nav {
   background-color: var(--primario-suave);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -161,11 +166,52 @@ body {
   padding: 0 1.5rem;
 }
 
+/* Botón del menú móvil: visible solo bajo 768px */
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radio);
+  padding: 0.55rem 1rem;
+  margin: 0.6rem 0;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: #ffffff;
+}
+
+.nav-icono {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-icono span {
+  width: 18px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+
+/* Menú cerrado por defecto en móvil; script.js lo abre con .nav-abierto */
 .sitio-nav ul {
   list-style: none;
+  display: none;
+  flex-direction: column;
+}
+
+.sitio-nav.nav-abierto ul {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  padding-bottom: 0.75rem;
 }
 
 .sitio-nav a {
@@ -217,10 +263,10 @@ main {
   color: var(--texto-suave);
 }
 
-/* ---------- 6. Beneficios ---------- */
+/* ---------- 6. Beneficios (Grid: 1 columna en móvil) ---------- */
 .grid-beneficios {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
@@ -244,10 +290,10 @@ main {
   color: var(--texto-suave);
 }
 
-/* ---------- 7. Planes y Precios ---------- */
+/* ---------- 7. Planes y Precios (Grid: 1 columna en móvil) ---------- */
 .grid-planes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   align-items: stretch;
 }
@@ -365,10 +411,10 @@ main {
   background-color: var(--acento-hover);
 }
 
-/* ---------- 8. TARJETAS DE MATERIAS (FOTOGRAFÍA REAL) ---------- */
+/* ---------- 8. Tarjetas de Materias (Grid: 1 columna en móvil) ---------- */
 .grid-materias {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.75rem;
 }
 
@@ -472,10 +518,10 @@ main {
   color: var(--acento);
 }
 
-/* ---------- 9. Modalidad Zoom ---------- */
+/* ---------- 9. Modalidad Zoom (Grid: 1 columna en móvil) ---------- */
 .grid-pasos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
@@ -512,7 +558,7 @@ main {
   color: var(--texto-suave);
 }
 
-/* ---------- 10. FORMULARIO DE SOLICITUD REDISEÑADO ---------- */
+/* ---------- 10. Formulario de Solicitud ---------- */
 .seccion-formulario {
   background: var(--blanco);
   border: 1px solid var(--borde);
@@ -545,17 +591,11 @@ main {
   gap: 1.75rem;
 }
 
-/* Disposición de campos en dos columnas */
+/* Disposición de campos: 1 columna en móvil */
 .form-filas {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-}
-
-@media (min-width: 680px) {
-  .form-filas {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 .campo-grupo {
@@ -630,7 +670,7 @@ select {
   padding-right: 2.5rem;
 }
 
-/* Fieldset selector de paquetes limpio */
+/* Fieldset selector de paquetes */
 .grupo-paquetes {
   border: none;
   padding: 0;
@@ -642,16 +682,11 @@ select {
   margin-bottom: 0.85rem;
 }
 
+/* Opciones de paquete: 1 columna en móvil */
 .opciones-paquetes {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.85rem;
-}
-
-@media (min-width: 680px) {
-  .opciones-paquetes {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .tarjeta-opcion {
@@ -733,15 +768,52 @@ select {
   font-size: 1rem;
 }
 
-@media (min-width: 500px) {
-  .btn-formulario {
-    width: auto;
-  }
-}
-
 .nota-seguridad {
   font-size: 0.8rem;
   color: var(--texto-pista);
+}
+
+/* ---------- 12. Estados de validación (script.js) ---------- */
+.campo-invalido {
+  border-color: #dc2626;
+}
+
+input.campo-invalido:focus,
+select.campo-invalido:focus,
+textarea.campo-invalido:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+.mensaje-error {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #dc2626;
+}
+
+.aviso-formulario {
+  display: none;
+  padding: 0.9rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.aviso-formulario:not(:empty) {
+  display: block;
+}
+
+.aviso-error {
+  background-color: #fef2f2;
+  border: 1px solid #dc2626;
+  color: #991b1b;
+}
+
+.aviso-exito {
+  background-color: #ecfdf5;
+  border: 1px solid #10b981;
+  color: #065f46;
 }
 
 /* ---------- 11. Pie de Página Institucional ---------- */
@@ -792,4 +864,112 @@ address a:hover {
   font-size: 0.85rem;
   color: #64748b;
   text-align: center;
+}
+
+/* ============================================================
+   12. RESPONSIVO - Breakpoint 1: tablet (min-width: 768px)
+   2 columnas para beneficios, planes y catálogo de materias;
+   formularios y opciones de paquete pasan a grilla horizontal.
+   ============================================================ */
+@media (min-width: 768px) {
+  /* En tablet y escritorio el menú siempre es visible */
+  .nav-toggle {
+    display: none;
+  }
+
+  .sitio-nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+  }
+
+  .header-container {
+    padding: 4.5rem 3rem 3rem;
+  }
+
+  .grid-beneficios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-planes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* El plan destacado queda a ancho completo bajo la fila de 2 */
+  .grid-planes .tarjeta-plan:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .grid-materias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-filas {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .opciones-paquetes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .btn-formulario {
+    width: auto;
+  }
+}
+
+/* ============================================================
+   13. RESPONSIVO - Breakpoint 2: escritorio (min-width: 1024px)
+   Distribución completa de escritorio: barra de navegación
+   centrada, catálogos en fila única y formulario acotado.
+   ============================================================ */
+@media (min-width: 1024px) {
+  .header-container {
+    padding: 5rem 2rem 3.5rem;
+  }
+
+  /* Barra de navegación centrada propia del escritorio */
+  .nav-container {
+    padding: 0 2rem;
+  }
+
+  .sitio-nav ul {
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  main {
+    padding: 4rem 2rem;
+  }
+
+  .grid-beneficios {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-planes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-planes .tarjeta-plan:last-child {
+    grid-column: auto;
+  }
+
+  .grid-materias {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .grid-pasos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* El formulario se acota para mantener líneas legibles */
+  .form-academico {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+
+  .form-filas {
+    gap: 1.75rem 2rem;
+  }
 }

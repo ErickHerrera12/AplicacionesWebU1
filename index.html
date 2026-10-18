@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -30,7 +31,11 @@
 
     <nav aria-label="Navegación principal" class="sitio-nav">
       <div class="nav-container">
-        <ul>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">
+          <span class="nav-icono" aria-hidden="true"><span></span><span></span><span></span></span>
+          Menú
+        </button>
+        <ul id="menu-principal">
           <li><a href="#presentacion">Presentación</a></li>
           <li><a href="#planes">Planes</a></li>
           <li><a href="#tutores">Materias</a></li>
