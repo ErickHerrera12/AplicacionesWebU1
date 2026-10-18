@@ -5,169 +5,372 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Centro de Tutorías Académicas · Área de Computación</title>
   <meta name="description" content="Acompañamiento académico especializado en Computación: asesorías personalizadas, refuerzo en programación, bases de datos y desarrollo web con coordinación directa por Zoom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-  <header>
-    <p>Área de Computación</p>
-    <h1>Centro de Tutorías Académicas</h1>
-    <p>Potencia tu rendimiento académico con asesorías personalizadas impartidas por expertos. Resuelve tus proyectos y domina cada materia con acompañamiento directo por Zoom.</p>
+  <!-- Encabezado Institucional -->
+  <header class="sitio-header">
+    <div class="header-container">
+      <div class="header-texto">
+        <span class="categoria-institucional">Área de Computación · Facultad de Ingeniería</span>
+        <h1>Centro de Tutorías Académicas</h1>
+        <p class="descripcion-header">Acompañamiento académico especializado para estudiantes universitarios. Refuerza tus bases teóricas, resuelve dudas puntuales y prepara tus proyectos y exámenes con sesiones individuales o grupales en vivo por Zoom.</p>
+        <div class="header-cta">
+          <a href="#reserva" class="btn btn-primario">Solicitar tutoría</a>
+          <a href="#tutores" class="btn btn-secundario">Ver materias disponibles</a>
+        </div>
+      </div>
+    </div>
 
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="#presentacion">Presentación</a></li>
-        <li><a href="#tutores">Materias y perfiles</a></li>
-        <li><a href="#modalidad">Coordinación por Zoom</a></li>
-        <li><a href="#reserva">Solicitar tutoría</a></li>
-      </ul>
+    <nav aria-label="Navegación principal" class="sitio-nav">
+      <div class="nav-container">
+        <ul>
+          <li><a href="#presentacion">Presentación</a></li>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#tutores">Materias</a></li>
+          <li><a href="#modalidad">Metodología Zoom</a></li>
+          <li><a href="#reserva">Solicitud</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <main id="contenido">
 
-    <!-- Sección 1: presentación y beneficios -->
-    <section id="presentacion" aria-labelledby="titulo-presentacion">
-      <h2 id="titulo-presentacion">Eleva tus calificaciones al siguiente nivel</h2>
-      <p>¿Tienes dificultades con la lógica de programación, bases de datos o materias técnicas complejas? Nuestro centro te conecta con tutores de alto rendimiento que te explican paso a paso, resuelven tus dudas con ejemplos prácticos y te preparan con éxito para cada evaluación.</p>
+    <!-- Sección 1: Presentación y Beneficios -->
+    <section id="presentacion" class="seccion-bloque" aria-labelledby="titulo-presentacion">
+      <div class="bloque-header">
+        <h2 id="titulo-presentacion">Eleva tus calificaciones al siguiente nivel</h2>
+        <p>Acompañamiento enfocado en resolver bloqueos conceptuales y prácticos sin rodeos teóricos innecesarios.</p>
+      </div>
 
-      <h3>Planes disponibles</h3>
-      <ul>
-        <li><strong>Sesión individual (1 hora):</strong> atención 100% personalizada enfocada en tus dudas específicas o revisión de código. $10,00.</li>
-        <li><strong>Paquete semanal (3 horas):</strong> seguimiento continuo ideal para avanzar sin tropiezos en tus proyectos de programación. $25,00.</li>
-        <li><strong>Asesoría grupal (hasta 3 estudiantes):</strong> aprende en equipo optimizando tu inversión. $8,00 por estudiante.</li>
-      </ul>
-
-      <h3>¿Por qué elegirnos?</h3>
-      <ul>
-        <li>Explicaciones claras y directas al grano, sin rodeos teóricos innecesarios.</li>
-        <li>Resolución guiada de ejercicios tipo examen y proyectos prácticos.</li>
-        <li>Flexibilidad total de horarios acordados directamente por Zoom.</li>
-      </ul>
+      <div class="grid-beneficios">
+        <div class="tarjeta-beneficio">
+          <h3>Resolución práctica</h3>
+          <p>Explicaciones paso a paso orientadas a tus talleres, ejercicios de guía y revisión de código en tiempo real.</p>
+        </div>
+        <div class="tarjeta-beneficio">
+          <h3>Preparación de evaluaciones</h3>
+          <p>Análisis guiado de ejercicios tipo examen para identificar patrones comunes de error y optimizar tu tiempo.</p>
+        </div>
+        <div class="tarjeta-beneficio">
+          <h3>Horarios coordinados</h3>
+          <p>Flexibilidad para programar tu sesión en los momentos que mejor se adapten a tu carga académica semanal.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Sección 2: materias de apoyo y perfiles -->
-    <section id="tutores" aria-labelledby="titulo-tutores">
-      <h2 id="titulo-tutores">Materias de apoyo y perfiles especializados</h2>
-      <p>Contamos con tutores de nivel avanzado con excelentes calificaciones y experiencia comprobada en las áreas clave de la carrera.</p>
+    <!-- Sección Planes -->
+    <section id="planes" class="seccion-bloque" aria-labelledby="titulo-planes">
+      <div class="bloque-header">
+        <h2 id="titulo-planes">Planes y tarifas de asesoría</h2>
+        <p>Tarifas transparentes según el nivel de acompañamiento que requieras.</p>
+      </div>
 
-      <article>
-        <img src="images/tutor-programacion.jpg" alt="Ilustración de una sesión de tutoría de programación con código en pantalla" width="400" height="400">
-        <h3>Programación y Estructura de Datos</h3>
-        <p>Orientación en POO, estructuras dinámicas y resolución de algoritmos complejos en C++, Java y Python.</p>
-        <p>Aprende a estructurar tu código de forma limpia, eficiente y libre de errores lógicos.</p>
-      </article>
+      <div class="grid-planes">
+        <div class="tarjeta-plan">
+          <span class="plan-tipo">Puntual</span>
+          <h3>Sesión Individual</h3>
+          <div class="plan-precio">$10,00 <span>/ 1 hora</span></div>
+          <p class="plan-detalle">Atención 1 a 1 para resolver dudas puntuales o destrabar errores en código previo a una entrega.</p>
+          <ul class="plan-lista">
+            <li>Revisión directa de tu código en Zoom</li>
+            <li>Enfoque exclusivo en tus dudas</li>
+            <li>Material de apoyo digital</li>
+          </ul>
+          <a href="#reserva" class="btn-plan">Elegir plan</a>
+        </div>
 
-      <article>
-        <img src="images/tutor-web.jpg" alt="Ilustración de desarrollo web y diseño de bases de datos relacionales" width="400" height="400">
-        <h3>Bases de Datos y Desarrollo Web</h3>
-        <p>Modelado relacional, consultas SQL avanzadas, normalización y creación de aplicaciones web modernas.</p>
-        <p>Domina el diseño de bases de datos robustas y la interacción entre frontend y backend.</p>
-      </article>
+        <div class="tarjeta-plan plan-destacado">
+          <span class="plan-tipo">Recomendado</span>
+          <h3>Paquete Semanal</h3>
+          <div class="plan-precio">$25,00 <span>/ 3 horas</span></div>
+          <p class="plan-detalle">Seguimiento continuo ideal para avanzar sin tropiezos en proyectos extensos y parciales complejos.</p>
+          <ul class="plan-lista">
+            <li>3 horas distribuidas según tu necesidad</li>
+            <li>Seguimiento estructurado de proyectos</li>
+            <li>Grabación de las sesiones para repaso</li>
+            <li>Canal de consultas breves entre clases</li>
+          </ul>
+          <a href="#reserva" class="btn-plan btn-plan-destacado">Elegir plan</a>
+        </div>
 
-      <article>
-        <img src="images/tutor-matematicas.jpg" alt="Ilustración de resolución de problemas de cálculo y álgebra lineal" width="400" height="400">
-        <h3>Cálculo y Álgebra Lineal</h3>
-        <p>Derivadas, integrales, matrices, espacios vectoriales y sus aplicaciones prácticas en ingeniería.</p>
-        <p>Comprende la matemática desde la base analítica para superar cualquier examen parcial o final.</p>
-      </article>
-
-      <article>
-        <img src="images/tutor-redes.jpg" alt="Ilustración de configuración de redes de computadoras y sistemas operativos" width="400" height="400">
-        <h3>Redes y Sistemas Operativos</h3>
-        <p>Configuración de routers, direccionamiento IP, comandos de terminal Linux y gestión de procesos.</p>
-        <p>Domina la infraestructura tecnológica y los fundamentos de los sistemas operativos modernos.</p>
-      </article>
+        <div class="tarjeta-plan">
+          <span class="plan-tipo">Colaborativo</span>
+          <h3>Asesoría Grupal</h3>
+          <div class="plan-precio">$8,00 <span>/ por estudiante</span></div>
+          <p class="plan-detalle">Aprende junto a compañeros de tu mismo curso para resolver talleres y proyectos en común.</p>
+          <ul class="plan-lista">
+            <li>Hasta 3 estudiantes por sesión (1 hora)</li>
+            <li>Resolución colaborativa de guías</li>
+            <li>Discusión guiada de alternativas lógicas</li>
+          </ul>
+          <a href="#reserva" class="btn-plan">Elegir plan</a>
+        </div>
+      </div>
     </section>
 
-    <!-- Sección 3: horarios y modalidades -->
-    <section id="modalidad" aria-labelledby="titulo-modalidad">
-      <h2 id="titulo-modalidad">Modalidad y coordinación por Zoom</h2>
-      <p>Diseñamos un proceso ágil para que comiences a recibir apoyo de inmediato, sin trámites engorrosos.</p>
+    <!-- Sección 2: Materias con Fotografía Real -->
+    <section id="tutores" class="seccion-bloque" aria-labelledby="titulo-tutores">
+      <div class="bloque-header">
+        <h2 id="titulo-tutores">Materias de apoyo y perfiles especializados</h2>
+        <p>Tutores de nivel avanzado con experiencia comprobada en las cátedras fundamentales de la carrera.</p>
+      </div>
 
-      <h3>¿Cómo coordinamos tu clase?</h3>
-      <ul>
-        <li><strong>1. Envía tu solicitud:</strong> completa el formulario indicando la materia y el paquete de tu interés.</li>
-        <li><strong>2. Coordinación ágil:</strong> nos pondremos en contacto contigo por correo o WhatsApp para definir el día y la hora exacta según tu disponibilidad.</li>
-        <li><strong>3. Conéctate y aprende:</strong> recibe el enlace directo de Zoom para tu sesión con pantalla compartida y material de apoyo.</li>
-      </ul>
+      <div class="grid-materias">
+
+        <!-- Materia 1 -->
+        <article class="tarjeta-materia">
+          <div class="materia-imagen-wrap">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Editor de código en pantalla con sintaxis de programación" loading="lazy">
+            <span class="badge-materia">Programación</span>
+          </div>
+          <div class="materia-contenido">
+            <div class="tecnologias-tags">
+              <span>C++</span>
+              <span>Java</span>
+              <span>Python</span>
+              <span>POO</span>
+            </div>
+            <h3>Programación y Estructura de Datos</h3>
+            <p>Orientación en programación orientada a objetos, recursión, listas enlazadas, árboles binarios y análisis de complejidad algorítmica.</p>
+            <div class="materia-meta">
+              <strong>Resultado:</strong> Código modular, eficiente y depurado correctamente.
+            </div>
+          </div>
+        </article>
+
+        <!-- Materia 2 -->
+        <article class="tarjeta-materia">
+          <div class="materia-imagen-wrap">
+            <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&q=80" alt="Servidores y almacenamiento de datos tecnológicos" loading="lazy">
+            <span class="badge-materia">Datos & Web</span>
+          </div>
+          <div class="materia-contenido">
+            <div class="tecnologias-tags">
+              <span>SQL</span>
+              <span>PostgreSQL</span>
+              <span>Frontend</span>
+              <span>APIs</span>
+            </div>
+            <h3>Bases de Datos y Desarrollo Web</h3>
+            <p>Modelado entidad-relación, normalización, consultas SQL intermedias y avanzadas, e integración de datos en aplicaciones web.</p>
+            <div class="materia-meta">
+              <strong>Resultado:</strong> Estructuras de datos sólidas y comunicación cliente-servidor funcional.
+            </div>
+          </div>
+        </article>
+
+        <!-- Materia 3 -->
+        <article class="tarjeta-materia">
+          <div class="materia-imagen-wrap">
+            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80" alt="Pizarra con ecuaciones matemáticas y cálculo diferencial" loading="lazy">
+            <span class="badge-materia">Ciencias Exactas</span>
+          </div>
+          <div class="materia-contenido">
+            <div class="tecnologias-tags">
+              <span>Cálculo</span>
+              <span>Álgebra Lineal</span>
+              <span>Matrices</span>
+            </div>
+            <h3>Cálculo y Álgebra Lineal</h3>
+            <p>Derivadas, métodos de integración, cálculo en varias variables, sistemas lineales, matrices y espacios vectoriales para ingeniería.</p>
+            <div class="materia-meta">
+              <strong>Resultado:</strong> Comprensión analítica para resolver exámenes con seguridad.
+            </div>
+          </div>
+        </article>
+
+        <!-- Materia 4 -->
+        <article class="tarjeta-materia">
+          <div class="materia-imagen-wrap">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Cableado de red y equipo de telecomunicaciones" loading="lazy">
+            <span class="badge-materia">Infraestructura</span>
+          </div>
+          <div class="materia-contenido">
+            <div class="tecnologias-tags">
+              <span>Linux</span>
+              <span>TCP/IP</span>
+              <span>Subnetting</span>
+              <span>Bash</span>
+            </div>
+            <h3>Redes y Sistemas Operativos</h3>
+            <p>Configuración de rutas, direccionamiento IP, protocolos de transporte, uso de terminal Linux y administración de procesos del sistema.</p>
+            <div class="materia-meta">
+              <strong>Resultado:</strong> Dominio de entornos de terminal y comprensión de la arquitectura de red.
+            </div>
+          </div>
+        </article>
+
+      </div>
     </section>
 
-    <!-- Sección 4: formulario de solicitud -->
-    <section id="reserva" aria-labelledby="titulo-reserva">
-      <h2 id="titulo-reserva">Solicita tu tutoría ahora</h2>
-      <p>Llena tus datos de contacto para iniciar la coordinación de tu clase virtual.</p>
+    <!-- Sección 3: Modalidad Zoom -->
+    <section id="modalidad" class="seccion-bloque" aria-labelledby="titulo-modalidad">
+      <div class="bloque-header">
+        <h2 id="titulo-modalidad">Modalidad y coordinación por Zoom</h2>
+        <p>Proceso estructurado en 3 pasos para comenzar sin demoras.</p>
+      </div>
 
-      <form action="#" method="post">
-        <div class="form-grupo">
-          <label for="nombres">Nombres y apellidos</label>
-          <p class="pista" id="pista-nombres">Como deseas que nos dirijamos a ti.</p>
-          <input type="text" id="nombres" name="nombres" autocomplete="name" required aria-describedby="pista-nombres">
+      <div class="grid-pasos">
+        <div class="tarjeta-paso">
+          <span class="numero-paso">1</span>
+          <h3>Registro de solicitud</h3>
+          <p>Completa el formulario indicando la materia, tus dudas principales y el horario en el que tienes disponibilidad.</p>
+        </div>
+        <div class="tarjeta-paso">
+          <span class="numero-paso">2</span>
+          <h3>Coordinación directa</h3>
+          <p>Nos comunicamos contigo por WhatsApp o correo electrónico para confirmar el horario exacto y facilitarte los detalles.</p>
+        </div>
+        <div class="tarjeta-paso">
+          <span class="numero-paso">3</span>
+          <h3>Sesión en vivo</h3>
+          <p>Te conectas al enlace exclusivo de Zoom con pantalla compartida, pizarra interactiva y resolución guiada de ejercicios.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 4: Formulario Rediseñado Profesional -->
+    <section id="reserva" class="seccion-bloque seccion-formulario" aria-labelledby="titulo-reserva">
+      <div class="formulario-encabezado">
+        <h2 id="titulo-reserva">Solicita tu tutoría</h2>
+        <p>Ingresa tus datos a continuación. Te responderemos a la brevedad para coordinar la fecha y hora de tu clase.</p>
+      </div>
+
+      <form action="#" method="post" class="form-academico">
+        
+        <div class="form-filas">
+          <!-- Campo 1 -->
+          <div class="campo-grupo">
+            <label for="nombres">Nombres y apellidos <span class="requerido" aria-hidden="true">*</span></label>
+            <input type="text" id="nombres" name="nombres" autocomplete="name" placeholder="Ej. Juan Pérez" required aria-describedby="pista-nombres">
+            <span class="pista" id="pista-nombres">Como deseas que nos dirijamos a ti.</span>
+          </div>
+
+          <!-- Campo 2 -->
+          <div class="campo-grupo">
+            <label for="correo">Correo electrónico institucional o personal <span class="requerido" aria-hidden="true">*</span></label>
+            <input type="email" id="correo" name="correo" autocomplete="email" placeholder="estudiante@universidad.edu" required aria-describedby="pista-correo">
+            <span class="pista" id="pista-correo">Dirección donde recibirás el enlace de Zoom.</span>
+          </div>
+
+          <!-- Campo 3 -->
+          <div class="campo-grupo">
+            <label for="telefono">Teléfono / WhatsApp de contacto <span class="requerido" aria-hidden="true">*</span></label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="0991234567" required aria-describedby="pista-telefono">
+            <span class="pista" id="pista-telefono">Para coordinar con rapidez la hora de la clase.</span>
+          </div>
+
+          <!-- Campo 4 -->
+          <div class="campo-grupo">
+            <label for="cedula-matricula">Cédula o número de matrícula <span class="requerido" aria-hidden="true">*</span></label>
+            <input type="text" id="cedula-matricula" name="cedula-matricula" inputmode="numeric" placeholder="10 dígitos o código universitario" required aria-describedby="pista-cedula">
+            <span class="pista" id="pista-cedula">Para el registro académico de asistencia.</span>
+          </div>
         </div>
 
-        <div class="form-grupo">
-          <label for="correo">Correo electrónico</label>
-          <p class="pista" id="pista-correo">Aquí te enviaremos la confirmación y el acceso a Zoom.</p>
-          <input type="email" id="correo" name="correo" autocomplete="email" required aria-describedby="pista-correo">
+        <!-- Campo Asignatura -->
+        <div class="campo-grupo campo-completo">
+          <label for="asignatura">Asignatura que necesitas reforzar <span class="requerido" aria-hidden="true">*</span></label>
+          <div class="select-envoltura">
+            <select id="asignatura" name="asignatura" required>
+              <option value="" selected disabled>Selecciona una asignatura del listado</option>
+              <option value="programacion-objetos">Programación Orientada a Objetos (C++, Java, Python)</option>
+              <option value="estructura-datos">Estructura de Datos y Algoritmos</option>
+              <option value="base-datos">Bases de Datos y SQL</option>
+              <option value="desarrollo-web">Desarrollo Web Frontend y Backend</option>
+              <option value="calculo-diferencial">Cálculo Diferencial e Integral</option>
+              <option value="algebra-lineal">Álgebra Lineal</option>
+              <option value="redes-computadoras">Redes de Computadoras y Enrutamiento</option>
+              <option value="sistemas-operativos">Sistemas Operativos y Terminal Linux</option>
+            </select>
+          </div>
         </div>
 
-        <div class="form-grupo">
-          <label for="telefono">Número de teléfono / WhatsApp</label>
-          <p class="pista" id="pista-telefono">Para coordinar rápidamente el horario de tu sesión.</p>
-          <input type="tel" id="telefono" name="telefono" autocomplete="tel" required aria-describedby="pista-telefono">
-        </div>
+        <!-- Selección de Paquetes -->
+        <fieldset class="campo-grupo campo-completo grupo-paquetes">
+          <legend>Selecciona tu modalidad o paquete <span class="requerido" aria-hidden="true">*</span></legend>
+          <span class="pista pista-fieldset" id="pista-paquete">Elige la modalidad que se adapte a tu meta de estudio.</span>
 
-        <div class="form-grupo">
-          <label for="cedula-matricula">Cédula o número de matrícula</label>
-          <p class="pista" id="pista-cedula">Cédula de identidad de 10 dígitos o tu código de estudiante.</p>
-          <input type="text" id="cedula-matricula" name="cedula-matricula" inputmode="numeric" required aria-describedby="pista-cedula">
-        </div>
+          <div class="opciones-paquetes">
+            
+            <label class="tarjeta-opcion" for="sesion-individual">
+              <input type="radio" id="sesion-individual" name="paquete" value="individual" required aria-describedby="pista-paquete">
+              <span class="opcion-cuerpo">
+                <span class="opcion-header">
+                  <span class="opcion-titulo">Sesión individual</span>
+                  <span class="opcion-precio">$10,00</span>
+                </span>
+                <span class="opcion-desc">1 hora · Atención personalizada para dudas puntuales</span>
+              </span>
+            </label>
 
-        <div class="form-grupo">
-          <label for="asignatura">Asignatura en la que requieres apoyo</label>
-          <select id="asignatura" name="asignatura" required>
-            <option value="" selected disabled>Selecciona una materia</option>
-            <option value="programacion-objetos">Programación Orientada a Objetos</option>
-            <option value="estructura-datos">Estructura de Datos</option>
-            <option value="base-datos">Bases de Datos</option>
-            <option value="desarrollo-web">Desarrollo Web</option>
-            <option value="calculo-diferencial">Cálculo Diferencial</option>
-            <option value="algebra-lineal">Álgebra Lineal</option>
-            <option value="redes-computadoras">Redes de Computadoras</option>
-            <option value="sistemas-operativos">Sistemas Operativos</option>
-          </select>
-        </div>
+            <label class="tarjeta-opcion opcion-marcada" for="paquete-semanal">
+              <input type="radio" id="paquete-semanal" name="paquete" value="semanal" aria-describedby="pista-paquete" checked>
+              <span class="opcion-cuerpo">
+                <span class="opcion-header">
+                  <span class="opcion-titulo">Paquete semanal</span>
+                  <span class="opcion-precio">$25,00</span>
+                </span>
+                <span class="opcion-desc">3 horas · Seguimiento para proyectos y exámenes</span>
+              </span>
+            </label>
 
-        <fieldset class="form-grupo">
-          <legend>Selecciona tu paquete de tutoría</legend>
-          <p class="pista" id="pista-paquete">Elige la modalidad que mejor se adapte a tus necesidades de estudio.</p>
-          <input type="radio" id="sesion-individual" name="paquete" value="individual" required aria-describedby="pista-paquete">
-          <label for="sesion-individual">Sesión individual (1 hora · $10,00)</label>
-          <input type="radio" id="paquete-semanal" name="paquete" value="semanal" aria-describedby="pista-paquete">
-          <label for="paquete-semanal">Paquete semanal (3 horas · $25,00)</label>
-          <input type="radio" id="sesion-grupal" name="paquete" value="grupal" aria-describedby="pista-paquete">
-          <label for="sesion-grupal">Asesoría grupal (1 hora · $8,00 por estudiante)</label>
+            <label class="tarjeta-opcion" for="sesion-grupal">
+              <input type="radio" id="sesion-grupal" name="paquete" value="grupal" aria-describedby="pista-paquete">
+              <span class="opcion-cuerpo">
+                <span class="opcion-header">
+                  <span class="opcion-titulo">Asesoría grupal</span>
+                  <span class="opcion-precio">$8,00</span>
+                </span>
+                <span class="opcion-desc">1 hora por estudiante · Hasta 3 compañeros</span>
+              </span>
+            </label>
+
+          </div>
         </fieldset>
 
-        <div class="form-grupo">
-          <label for="motivo">Temas específicos o dudas a revisar</label>
-          <p class="pista" id="pista-motivo">Cuéntanos brevemente qué ejercicios o capítulos deseas repasar en Zoom.</p>
-          <textarea id="motivo" name="motivo" rows="4" maxlength="400" required aria-describedby="pista-motivo"></textarea>
+        <!-- Campo Descripción -->
+        <div class="campo-grupo campo-completo">
+          <label for="motivo">Temas específicos o ejercicios a revisar <span class="requerido" aria-hidden="true">*</span></label>
+          <textarea id="motivo" name="motivo" rows="4" maxlength="400" placeholder="Describe brevemente qué ejercicios, capítulos o talleres deseas preparar durante la sesión..." required aria-describedby="pista-motivo"></textarea>
+          <span class="pista" id="pista-motivo">Máximo 400 caracteres. Ayuda a que el tutor prepare el material con anticipación.</span>
         </div>
 
-        <button type="submit">Solicitar coordinación de tutoría</button>
+        <!-- Botón Enviar -->
+        <div class="form-acciones">
+          <button type="submit" class="btn btn-primario btn-formulario">Enviar solicitud de tutoría</button>
+          <p class="nota-seguridad">Tus datos serán utilizados únicamente para coordinar tu asesoría.</p>
+        </div>
+
       </form>
     </section>
 
   </main>
 
-  <footer>
-    <address>
-      Centro de Tutorías Académicas · Área de Computación<br>
-      <a href="mailto:contacto@tutoriascomputacion.com">contacto@tutoriascomputacion.com</a>
-    </address>
-    <p>© 2026 · Todos los derechos reservados.</p>
+  <footer class="sitio-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Centro de Tutorías Académicas</h3>
+        <p>Área de Computación · Facultad de Ingeniería y Ciencias Aplicadas.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <address>
+          <a href="mailto:contacto@tutoriascomputacion.com">contacto@tutoriascomputacion.com</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>&copy; 2026 Centro de Tutorías Académicas. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
 </body>
