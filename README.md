@@ -120,5 +120,3 @@ Las capturas de pantalla que acreditan la correcta adaptación del sitio en tres
 - DuRocher, D. (2021). *HTML and CSS QuickStart Guide*. ClydeBank Media.
 - Frain, B. (2022). *Responsive Web Design with HTML5 and CSS* (4.ª ed.). Packt.
 - Robbins, J. N. (2018). *Learning Web Design* (5.ª ed.). O’Reilly Media.
-```
-
